@@ -46,35 +46,16 @@ public class MainActivity extends AppCompatActivity {
         String note_m = Note_edit.getText().toString();
         double Note = Double.parseDouble(note_m);
         String text = spn.getSelectedItem().toString();
-        switch(text) {
-            case "Math":
-                if (!Math) {
-                    note_module = new Note(text, Note);
-                    buletin.add(note_module);
-                    Math = true;
-                } else {
-                    Toast.makeText(getApplicationContext(), "Note de math deja ", Toast.LENGTH_SHORT).show();
-                }
-                break;
-            case "Informatique":
-                if (!Informatique) {
-                    note_module = new Note(text, Note);
-                    buletin.add(note_module);
-                    Informatique = true;
-                } else {
-                    Toast.makeText(getApplicationContext(), "Note de Informatique deja ", Toast.LENGTH_SHORT).show();
-                }
-                break;
-            case "Pyhsique":
-                if (!Pyhsique) {
-                    note_module = new Note(text, Note);
-                    buletin.add(note_module);
-                    Pyhsique = true;
-                } else {
-                    Toast.makeText(getApplicationContext(), "Note de Pyhsique deja ", Toast.LENGTH_SHORT).show();
-                }
-                break;
+        note_module = new Note(text, Note);
+
+
+        if(!buletin.contains(note_module)) {
+            buletin.add(note_module);
+            Toast.makeText(getApplicationContext(), "la note est ajouter ", Toast.LENGTH_SHORT).show();
         }
+    else {
+        Toast.makeText(getApplicationContext(),"la note est deja saisie ",Toast.LENGTH_SHORT).show();
+    }
 
 
         arrayAdapter = new ArrayAdapter<Note>(this, android.R.layout.simple_list_item_1 , buletin);
