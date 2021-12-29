@@ -4,6 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+
+    android:background="@drawable/image"
     tools:context=".MainActivity">
 
     <LinearLayout
@@ -27,7 +29,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Module"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textSize="25dp" />
 
             <Spinner
                 android:id="@+id/spinner"
@@ -51,7 +54,9 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Note"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+                android:textSize="25dp" />
 
             <EditText
                 android:id="@+id/Note_edit"
@@ -60,6 +65,8 @@
                 android:layout_weight="1"
                 android:ems="10"
                 android:inputType="textPersonName"
+
+                android:textSize="25dp"
                 tools:ignore="TouchTargetSizeCheck" />
         </LinearLayout>
 
@@ -74,19 +81,24 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="Moyenne"
-                android:textAppearance="@style/TextAppearance.AppCompat.Body2" />
+                android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+
+                android:textSize="25dp" />
 
             <TextView
                 android:id="@+id/TextMoyenne"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:layout_weight="1"
+
+                android:textSize="25dp" />
 
         </LinearLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:background="#AF7878"
             android:orientation="horizontal">
 
             <Button
@@ -94,6 +106,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
+                android:background="#7A6B6B"
                 android:onClick="select"
                 android:text="saisir" />
         </LinearLayout>

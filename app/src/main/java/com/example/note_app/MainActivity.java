@@ -26,9 +26,7 @@ public class MainActivity extends AppCompatActivity {
     Note note_module;
     ArrayAdapter<Note> arrayAdapter ;
     ArrayList<Note> buletin = new ArrayList<Note>();
-    boolean Math = false;
-    boolean Informatique = false;
-    boolean Pyhsique = false;
+
 
 
     @Override
